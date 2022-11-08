@@ -1,0 +1,13 @@
+/* Global */
+@import "./global/global.css";
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* Sections */
+@import "./animais.css";
+@import "./faq.css";
+@import "./contato.css";
+
+/* Responsivo */
+@import "./global/responsivo.css";
+
