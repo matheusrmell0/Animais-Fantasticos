@@ -11,17 +11,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="./css/style.css" as="style">
-  <link rel="stylesheet" href="./css/style.css">
   <title>Animais Fantásticos</title>
   <meta name="description" content="Estudo do Vanilla JS">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.classList.add('js');</script>
+  <script alt="Verificação de Js para acessibilidade">document.documentElement.className += ' js';</script>
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <header class="menu">
-    <nav>
+    <nav class="js-menu">
       <ul>
         <li><a href="#animais">Animais</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -33,7 +33,7 @@
 
   <section class="grid-section animais" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista">
+    <ul class="animais-lista js-tabmenu">
       <li>
         <img src="./img/imagem1.jpg" alt="Raposa">
       </li>
@@ -54,7 +54,7 @@
       </li>
     </ul>
 
-    <div class="animais-descricao">
+    <div class="animais-descricao js-tabcontent">
       <section>
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
@@ -107,7 +107,7 @@
 
   <section class="grid-section faq" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
+    <dl class="faq-lista js-accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
       <dt>Eles são fantásticos?</dt>

@@ -24,7 +24,9 @@ img {
   display: block;
 }
 /*  */
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   zoom: 1.2;
   background: #faf6ed;

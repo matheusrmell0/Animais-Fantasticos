@@ -29,3 +29,6 @@
     margin-bottom: 0px;
   }
 }
+@media (max-width: 410px){
+  *{font-size: 95%;}
+}
