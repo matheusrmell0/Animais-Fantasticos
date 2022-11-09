@@ -607,3 +607,67 @@
 // if (matchMedia("(max-width: 720px)").matches) {
 //   document.querySelector(".menu").classList.add("menu-mobile");
 // }
+
+// EVENTSSS
+
+// //
+// const linksInternos = document.querySelectorAll('a[href^="#"]');
+// linksInternos.forEach((link) => {
+//   link.addEventListener("click", toogleAtivo);
+// });
+
+// function toogleAtivo(event) {
+//   event.preventDefault();
+//   linksInternos.forEach((classe) => {
+//     classe.classList.remove("ativo");
+//   });
+//   this.classList.add("ativo");
+// }
+// //
+
+// // 
+// const allElements = document.querySelectorAll("*");
+
+// function mostrar(event){
+//   console.log(this);
+//   event.target.remove();
+// }
+
+// function zoom(event){
+// if(event.key === 't'){
+//   document.documentElement.classList.toggle('font-plus');
+// }
+// }
+
+// allElements.forEach((event) => {
+//   event.addEventListener('click', mostrar);
+//   this.addEventListener('keydown', zoom);
+// });
+// // 
+
+// TRANSVERSINGGG
+
+// const lista = document.querySelector('.animais-lista');
+// Array.from(lista.children).forEach((item)=>{console.log(item)})
+
+// 
+// const menu = document.querySelector('.menu');
+// const copy = document.querySelector('.copy');
+// const menuCopy = menu.cloneNode(true);
+// copy.appendChild(menuCopy);
+// // 
+
+// // 
+// const primeiroDt = document.querySelector('dt:first-child');
+// console.log("primeiroDt", primeiroDt)
+// console.log("primeiraDd", document.querySelector('dt').nextElementSibling);
+// // 
+// const dds = document.querySelectorAll('dt');
+// dds.forEach((item)=>{console.log(item.nextElementSibling)});
+// // 
+
+// const faq = document.querySelector('.faq');
+// const animais = document.querySelector('.animais');
+// faq.innerHTML = animais.innerHTML;
+
+
