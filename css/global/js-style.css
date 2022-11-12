@@ -1,3 +1,4 @@
+/*  Navegação por Tabs */
 .js .js-tabcontent section{
   display: none;
 }
@@ -18,7 +19,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
-/*  */
+/* Accordion List */
 .js .js-accordion dd{
   display: none;
 }
@@ -47,3 +48,13 @@
   }
 }
 
+/* Scroll Animation */
+.js .js-scroll{
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: .3s;
+}
+.js .js-scroll.anime{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
