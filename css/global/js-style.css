@@ -1,15 +1,20 @@
 /*  Navegação por Tabs */
-.js .js-tabcontent section{
+.js [data-tab="content"] section{
   display: none;
 }
 
-.js .js-tabcontent section.ativo{
+.js [data-tab="content"] section.ativo{
   display: block !important;
   margin-top: 0rem;
-  animation: show .5s forwards;
+}
+.js [data-tab="content"] section.ativo.show-right{
+  animation: show-right .5s forwards;
+}
+.js [data-tab="content"] section.ativo.show-down{
+  animation: show-down .5s forwards;
 }
 
-@keyframes show {
+@keyframes show-right {
   from{
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
@@ -19,20 +24,33 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes show-down {
+  from{
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
 /* Accordion List */
-.js .js-accordion dd{
+.js [data-anime="accordion"] dd{
   display: none;
 }
 
-.js-accordion dt::after{
+[data-anime="accordion"] dt::after{
   content: "⮟";
   margin-left: 12px;
 }
-.js-accordion dt.show::after{
+[data-anime="accordion"] dt.show::after{
   content: "■";
 }
 
-.js .js-accordion dd.show{
+.js [data-anime="accordion"] dd.show{
   display: block;
   animation: showlist .5s forwards;
 }
@@ -49,12 +67,12 @@
 }
 
 /* Scroll Animation */
-.js .js-scroll{
+.js [data-anime="scroll"]{
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
   transition: .3s;
 }
-.js .js-scroll.anime{
+.js [data-anime="scroll"].anime{
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }

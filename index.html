@@ -21,7 +21,7 @@
 
 <body>
   <header class="menu">
-    <nav class="js-menu">
+    <nav data-menu="smooth">
       <ul>
         <li><a href="#animais">Animais</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -31,9 +31,9 @@
     </nav>
   </header>
 
-  <section class="grid-section animais js-scroll" id="animais">
+  <section class="grid-section animais" data-anime="scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabmenu">
+    <ul class="animais-lista" data-tab='menu'>
       <li>
         <img src="./img/imagem1.jpg" alt="Raposa">
       </li>
@@ -54,8 +54,8 @@
       </li>
     </ul>
 
-    <div class="animais-descricao js-tabcontent">
-      <section>
+    <div class="animais-descricao" data-tab="content">
+      <section data-anime="show-down">
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
         <p>As raposas são geralmente menores do que alguns outros membros da família Canidae, como lobos e chacais, embora possam ser maiores do que alguns dentro da família.</p>
@@ -63,7 +63,7 @@
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Esquilo</h2>
         <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae.</p>
         <p>Como todos os roedores, possuem presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
@@ -71,7 +71,7 @@
         <p>Durante a gestação, os pais preparam o ninho para receber os filhotes. Constroem ninhos com folhas e galhos, em ramos muito altos, em árvores como a cajarana.</p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Urso</h2>
         <p>Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos plantígrados, geralmente de grande porte, contendo os ursos e os pandas.</p>
         <p>A maioria dos ursos costumam preparar-se para hibernar durante o inverno, comendo grandes quantidades de comida antes de entrar em uma toca para o período de sono profundo.</p>
@@ -79,14 +79,14 @@
         <p>As espécies mais antigas e primitivas desta família estão reunidas no gênero Ballusia, do Mioceno Inferior.</p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Lobo</h2>
         <p>O lobo é um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás.</p>
         <p>Os lobos são capazes de percorrer longas distâncias com uma velocidade média de 10 quilômetros por hora e são conhecidos por atingir velocidades próximas a 65 quilômetros por hora durante uma perseguição.</p>
-        <p>O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a aumentar proporcionalmente com a latitude, como previsto pela teoria de Christian Bergmann.</p> 
+        <p>O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a aumentar proporcionalmente com a latitude, como previsto pela teoria de Christian Bergmann.</p>
       </section>
 
-      <section>
+      <section data-anime="show-down">
         <h2>Macaco</h2>
         <p>Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum a todas as espécies de símios ou primatas antropoides.</p>
         <p>Os macacos variam em tamanho desde o sagui-pigmeu, que pode ser tão pequeno quanto 117 mm.</p>
@@ -94,7 +94,7 @@
         <p>No sentido estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca.</p>
       </section>
 
-      <section>
+      <section data-anime="show-right">
         <h2>Leão</h2>
         <p>O leão é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae.</p>
         <p>A pelagem é unicolor de coloração castanha, e os machos apresentam uma juba característica. Uma das características mais marcantes da espécie é a presença de um tufo de pelos pretos na cauda, que também possui uma espora.</p>
@@ -103,9 +103,9 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-anime="scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-accordion">
+    <dl class="faq-lista" data-anime="accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>A expectativa de vida de diferentes espécies animais há muito nos fascina e não é de agora. Já foram encontrados escritos sobre o assunto que datam do tempo de Aristóteles.</dd>
       <dt>Eles são fantásticos?</dt>
@@ -117,7 +117,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato">
+  <section class="grid-section contato" data-anime="scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <picture class="mapa">
       <img src="./img/mapa.png" alt="Mapa">
