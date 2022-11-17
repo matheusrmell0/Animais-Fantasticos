@@ -2,7 +2,9 @@
 @import "./global/global.css";
 @import "./global/header.css";
 @import "./global/footer.css";
-@import "./global/js-style.css";
+@import "./global/modal.css";
+@import "./global/js-style.css"; 
+@import "./global/tooltip.css";
 
 /* Sections */
 @import "./animais.css";

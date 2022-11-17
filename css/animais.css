@@ -1,36 +1,37 @@
 .titulo {
   font-family: "Playfair Display SC", georgia;
-  font-size: 6rem;
+  font-size: 7.5rem;
   line-height: 1;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   grid-column: 1 / 4;
 }
 .animais h2 {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  margin-bottom: 1rem;
+  letter-spacing: .125em;
+  margin-bottom: 1.25rem;
   color: #e54;
 }
 .animais h2::before {
   content: "";
   display: inline-block;
-  width: 40px;
-  height: 10px;
-  margin-right: 10px;
+  width: 50px;
+  height: 12.5px;
+  margin-right: 12.5px;
   background: #fb5;
 }
 .animais p {
+  font-size: 1.25rem;
   font-family: Helvetica, Arial;
   line-height: 1.2;
 }
 .animais p + p{
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 .animais-lista {
-  height: 370px;
+  height: 462.5px;
   overflow-y: scroll;
   grid-column: 2;
 }
@@ -38,12 +39,12 @@
   cursor: pointer;
 }
 .animais-lista::-webkit-scrollbar{
-  width: 18px;
+  width: 22.5px;
 }
 .animais-lista::-webkit-scrollbar-thumb{
   background: #fb5;
-  border-left: 4px solid #faf6ed;
-  border-right: 4px solid #faf6ed;
+  border-left: 5px solid #faf6ed;
+  border-right: 5px solid #faf6ed;
 }
 .animais-lista::-webkit-scrollbar-track{
   background: #faf6ed;
@@ -52,5 +53,5 @@
   grid-column: 3;
 }
 .animais-descricao section + section{
-  margin-top: 3rem;
+  margin-top: 3.75rem;
 }

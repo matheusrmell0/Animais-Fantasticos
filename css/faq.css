@@ -4,21 +4,23 @@
 .faq-lista dt{
   font-family: 'IBM Plex Mono' , monospace;
   font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-top: 2.5rem;
+  margin-bottom: .5125rem;
   color: #e54;
   max-width: max-content;
+  font-size: 1.25rem;
 }
 .faq-lista dt::before{
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 10px;
-  margin-right: 10px;
+  width: 25px;
+  height: 12.5px;
+  margin-right: 12.5px;
   background: #fb5;
 }
 .faq-lista dd{
+  font-size: 1.25rem;
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
-  margin-left: 30px;
+  margin-bottom: .5125rem;
+  margin-left: 37.5px;
 }

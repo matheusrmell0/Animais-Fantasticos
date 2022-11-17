@@ -4,8 +4,9 @@
   background: #fb5;
 }
 .copy p{
-  padding: 20px;
+  padding: 25px;
   font-family: 'IBM Plex Mono' , monospace;
   font-weight: bold;
+  font-size: 1.25rem;
 }
 

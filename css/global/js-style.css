@@ -44,7 +44,7 @@
 
 [data-anime="accordion"] dt::after{
   content: "⮟";
-  margin-left: 12px;
+  margin-left: 15px;
 }
 [data-anime="accordion"] dt.show::after{
   content: "■";
