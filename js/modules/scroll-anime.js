@@ -4,7 +4,7 @@ export default function initScrollAnime() {
   if (sections.length) {
     sections.forEach((item) => {
       function scrollAnimation() {
-        const isSectionVisible = item.getBoundingClientRect().top - window.innerHeight * 0.6 < 0;
+        const isSectionVisible = item.getBoundingClientRect().top - window.innerHeight * 0.8 < 0;
         if (isSectionVisible) {
           item.classList.add("anime");
         }
