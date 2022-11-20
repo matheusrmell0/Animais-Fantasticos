@@ -87,3 +87,66 @@
 .modal-container.ativo {
   display: flex;
 }
+
+@media(max-width: 700px){
+  .modal{
+    min-width: 300px;
+  }
+  .modal label{
+    font-size: 1rem;
+  }
+}
+@media(max-width: 535px){
+  .modal{
+    min-width: 200px;
+    padding: 40px;
+    border: 10px solid #fb5;
+    box-shadow: 0 0 0 10px #faf6ed;
+  }
+  .modal label{
+    font-size: 1rem;
+    margin: 1rem 0 0.625rem 0;
+  }
+  .modal input {
+    padding: 0.5rem 0.5rem;
+  }
+  .modal button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  .fechar {
+    top: -45px;
+    right: -45px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 375px){
+  .modal{
+    min-width: 170px;
+    padding: 18px;
+    border: 8px solid #fb5;
+    box-shadow: 0 0 0 8px #faf6ed;
+  }
+  .modal label{
+    font-size: 0.8rem;
+    margin: 0.8rem 0 0.5rem 0;
+  }
+  .modal input {
+    padding: 0.4rem 0.4rem;
+  }
+  .modal button[type="submit"] {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin-top: 1.1rem;
+  }
+  .fechar {
+    top: -35px;
+    right: -35px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
