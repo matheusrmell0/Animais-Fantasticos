@@ -26,7 +26,7 @@
   .dados{
     margin-top: 37.5px;
   }
-  .grid-section h1 {
+  .grid-section h1{
     font-size: 3.75rem;
   }
   .menu {
@@ -35,8 +35,22 @@
   .copy {
     margin-bottom: 0px;
   }
+  .numeros-grid{
+    grid-column: 1;
+    margin-left: 20px;
+  }
+  .numeros-grid h3,
+  .numeros-grid span{
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 410px){
+  .numeros-grid h3{
+    font-size: 1.4rem;
+  }
+  .numeros-grid span{
+    font-size: 1.1rem;
+  }
   .animais p {
     font-size: 1rem;
     line-height: 1.1;

@@ -1,4 +1,4 @@
-// Outside-Click
+// Outside-Click / Função para clique do lado de fora 
 export default function outsideClick(item, events, callBack) {
   const outside = "data-outside";
   const htmlPage = document.documentElement;
@@ -19,4 +19,4 @@ export default function outsideClick(item, events, callBack) {
       callBack();
     }
   }
-}
+};
