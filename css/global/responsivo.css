@@ -14,6 +14,9 @@
     grid-template-columns: 120px 1fr;
     grid-gap: 12.5px;
   }
+  .faq .titulo{
+    margin-bottom: 0;
+  }
   .animais-lista {
     grid-column: 1;
   }

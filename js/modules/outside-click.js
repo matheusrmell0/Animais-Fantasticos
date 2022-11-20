@@ -5,7 +5,7 @@ export default function outsideClick(item, events, callBack) {
 
   if (!item.hasAttribute(outside)) {
     events.forEach(userEvent =>{
-      htmlPage.addEventListener(userEvent, closedMenu);
+      setTimeout(() => htmlPage.addEventListener(userEvent, closedMenu));
     });
     item.setAttribute(outside, "");
   }

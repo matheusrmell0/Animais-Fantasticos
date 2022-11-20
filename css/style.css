@@ -8,6 +8,8 @@
 @import "./global/utilidades/js-style.css"; 
 @import "./global/utilidades/tooltip.css";
 @import "./global/utilidades/dropdown.css";
+@import "./global/utilidades/menu-mobile.css";
+
 
 /* Sections */
 @import "./animais.css";

@@ -12,7 +12,7 @@ export default function initDropDownMenu() {
 
   function showMenu(event) {
     event.preventDefault();
-    this.classList.add("ativo");
+    this.classList.toggle("ativo");
     outsideClick(this, ["touchstart", "click"],() => {
       this.classList.remove("ativo");
     });
