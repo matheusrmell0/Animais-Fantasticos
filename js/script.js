@@ -7,6 +7,7 @@ import initTooltip from './modules/tooltip.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initAnimeNumbers from './modules/anime-numbers.js';
+import initOpenOng from './modules/open-store.js';
 
 initSmoothScroll();
 initTabNav();
@@ -17,5 +18,5 @@ initTooltip();
 initDropDownMenu();
 initMenuMobile();
 initAnimeNumbers();
-
+initOpenOng();
 

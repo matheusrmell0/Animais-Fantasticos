@@ -76,3 +76,21 @@
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+.open{
+  display: flex; 
+  align-items: center;
+}
+[data-semana]::after{
+  display: inline-block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #e54;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  border: 1px solid black;
+}
+[data-semana].open::after{
+  background: #3f4;
+}
