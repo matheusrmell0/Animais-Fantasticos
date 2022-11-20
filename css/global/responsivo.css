@@ -72,5 +72,13 @@
   .animais-lista {
     height: 490px;
   }
+  .grid-section h1{
+    font-size: 3.55rem;
+  }
   *{font-size: 90%;}
+}
+@media (max-width: 360px){
+  .grid-section h1{
+    font-size: 3rem;
+  }
 }
