@@ -94,3 +94,7 @@
 [data-semana].open::after{
   background: #3f4;
 }
+.btc-preco{
+  background: #3f4;
+  padding: .2rem .5rem;
+}
