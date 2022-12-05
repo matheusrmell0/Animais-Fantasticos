@@ -1,7 +1,7 @@
 // Accordion List
 export default function initaccordion() {
   const questList = document.querySelectorAll('[data-anime="accordion"] dt');
-  const showContent = 'show';
+  const showContent = "show";
 
   function activeContent() {
     this.classList.toggle(showContent);
@@ -13,7 +13,7 @@ export default function initaccordion() {
     questList[0].nextElementSibling.classList.add(showContent);
 
     questList.forEach((item) => {
-      item.addEventListener('click', activeContent);
+      item.addEventListener("click", activeContent);
     });
   }
 }
