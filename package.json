@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "build": "webpack --mode production --entry ./js/script.js -o ./js",
-    "dev": "webpack --mode development --entry ./js/script.js -o ./js --watch"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/matheusrmell0/Animais-Fantasticos#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
     "eslint": "^8.29.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
