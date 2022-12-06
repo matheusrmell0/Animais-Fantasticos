@@ -1,15 +1,21 @@
 // SmoothScroll
-export default function initSmoothScroll() {
-  const linksInternos = document.querySelectorAll('[data-menu="smooth"] a[href^="#"]');
+export default class SmoothScroll {
+  constructor(links, options) {
+    this.linksInternos = document.querySelectorAll(links);
+    if (options === undefined) {
+      this.options = { behavior: "smooth", block: "start" };
+    } else {
+      this.options = options;
+    }
 
-  function smoothscrolling(event) {
+    this.smoothscrolling = this.smoothscrolling.bind(this);
+  }
+
+  smoothscrolling(event) {
     event.preventDefault();
-    const href = event.currentTarget.getAttribute('href');
+    const href = event.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
-    section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    section.scrollIntoView(this.options);
     // forma alternativa
     // window.scrollTo({
     //   top: section.offsetTop,
@@ -17,9 +23,18 @@ export default function initSmoothScroll() {
     // });
   }
 
-  if (linksInternos.length) {
-    linksInternos.forEach((link) => {
-      link.addEventListener('click', smoothscrolling);
-    });
+  addLinkEvent() {
+    if (this.linksInternos.length) {
+      this.linksInternos.forEach((link) => {
+        link.addEventListener("click", this.smoothscrolling);
+      });
+    }
+  }
+
+  init() {
+    if (this.linksInternos.length) {
+      this.addLinkEvent();
+    }
+    return this;
   }
 }
