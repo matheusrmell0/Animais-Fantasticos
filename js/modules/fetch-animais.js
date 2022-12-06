@@ -1,5 +1,5 @@
 // FETCH ANIMALS API
-import initAnimeNumbers from './anime-numbers.js';
+import AnimeNumbers from './anime-numbers.js';
 
 export default function initFetchAnimais() {
   function createAnimal(animal) {
@@ -16,7 +16,8 @@ export default function initFetchAnimais() {
         const divAnimal = createAnimal(animal);
         numerosGrid.appendChild(divAnimal);
       });
-      initAnimeNumbers();
+      const animarNumeros = new AnimeNumbers('[data-numero]', '.numeros','anime');
+      animarNumeros.init()
     } catch (erro) {
       console.log(Error(erro));
     }
