@@ -10,10 +10,8 @@ import initFetchAnimais from './modules/fetch-animais.js';
 import initFetchBitcoins from './modules/fetch-bitcoins.js';
 import initOpenOng from './modules/open-store.js';
 
-
 const scrollSuave = new SmoothScroll('[data-menu="smooth"] a[href^="#"]', { behavior: "smooth", block: "start", })
 scrollSuave.init()
-
 
 initTabNav();
 initaccordion();
