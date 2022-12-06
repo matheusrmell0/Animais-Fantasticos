@@ -26,5 +26,6 @@ export default class Accordion {
       this.toggleContent(this.questList[0]);
       this.addAccordionEvent();
     }
+    return this
   }
 }
