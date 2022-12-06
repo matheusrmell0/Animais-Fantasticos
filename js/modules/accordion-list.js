@@ -1,19 +1,30 @@
 // Accordion List
-export default function initaccordion() {
-  const questList = document.querySelectorAll('[data-anime="accordion"] dt');
-  const showContent = "show";
+export default class Accordion {
+  constructor(list, className) {
+    this.questList = document.querySelectorAll(list);
+    this.showContent = className;
 
-  function activeContent() {
-    this.classList.toggle(showContent);
-    this.nextElementSibling.classList.toggle(showContent);
+    this.toggleContent = this.toggleContent.bind(this);
   }
 
-  if (questList.length) {
-    questList[0].classList.add(showContent);
-    questList[0].nextElementSibling.classList.add(showContent);
+  toggleContent(item) {
+    item.classList.toggle(this.showContent);
+    item.nextElementSibling.classList.toggle(this.showContent);
+  }
 
-    questList.forEach((item) => {
-      item.addEventListener("click", activeContent);
+  // Adiciona os eventos ao accordion
+  addAccordionEvent() {
+    this.questList.forEach((item) => {
+      item.addEventListener("click", () => this.toggleContent(item));
     });
+  }
+
+  // Iniciar a função
+  init() {
+    if (this.questList.length) {
+      // Ativar a classe no primeiro item
+      this.toggleContent(this.questList[0]);
+      this.addAccordionEvent();
+    }
   }
 }
