@@ -1,21 +1,29 @@
 // Scroll Animation
-export default function initScrollAnime() {
-  const sections = document.querySelectorAll('[data-anime="scroll"]');
-  if (sections.length) {
-    sections.forEach((item) => {
-      function scrollAnimation() {
-        const isSectionVisible = item.getBoundingClientRect().top - window.innerHeight * 0.65 < 0;
-        if (isSectionVisible) {
-          item.classList.add('anime');
-        } else if (item.classList.contains('anime')) {
-          item.classList.remove('anime');
-        }
-        // if(item.getBoundingClientRect().top - (window.innerHeight * 0.6) < 0){
-        //   item.classList.add('anime');
-        // } ---Outro método
-      }
-      scrollAnimation();
-      document.addEventListener('scroll', scrollAnimation);
-    });
+export default class ScrollAnime {
+  constructor(target, classe) {
+    this.sections = document.querySelectorAll(target);
+    this.classe = classe;
+    this.halfwindow = window.innerHeight * 0.65;
+
+    this.scrollAnimation = this.scrollAnimation.bind(this);
+  }
+
+  scrollAnimation() {
+    this.sections.forEach((item) => {
+    const isSectionVisible =
+      item.getBoundingClientRect().top - this.halfwindow < 0;
+    if (isSectionVisible) {
+      item.classList.add(this.classe);
+    } else if (item.classList.contains(this.classe)) {
+      item.classList.remove(this.classe);
+    }
+  });
+}
+
+  init() {
+    if (this.sections.length) {
+      this.scrollAnimation();
+      document.addEventListener("scroll", this.scrollAnimation);
+    }
   }
 }

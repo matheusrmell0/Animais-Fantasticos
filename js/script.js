@@ -3,7 +3,7 @@ import Accordion from './modules/accordion-list.js';
 import TabNav from './modules/tab-nav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initScrollAnime from './modules/scroll-anime.js';
+import ScrollAnime from './modules/scroll-anime.js';
 import initDropDownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animais.js';
@@ -25,7 +25,9 @@ modal.init()
 const tooltip = new Tooltip('[data-tooltip]')
 tooltip.init()
 
-initScrollAnime();
+const scrollAnime = new ScrollAnime('[data-anime="scroll"]', 'anime')
+scrollAnime.init()
+
 initDropDownMenu();
 initMenuMobile();
 initOpenOng();
