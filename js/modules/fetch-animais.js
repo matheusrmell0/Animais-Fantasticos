@@ -1,5 +1,5 @@
 // FETCH ANIMALS API
-import AnimeNumbers from "./anime-numbers.js";
+import AnimeNumbers from "./helper/anime-numbers.js";
 
 export default function fetchAnimals(url, target) {
   // Cria a div contendo informações com o total de animais

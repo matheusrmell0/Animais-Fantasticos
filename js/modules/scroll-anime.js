@@ -1,14 +1,18 @@
 // Scroll Animation
+import debounce from './helper/debounce.js'
+
 export default class ScrollAnime {
   constructor(target, classe) {
     this.sections = document.querySelectorAll(target);
     this.classe = classe;
     this.halfwindow = window.innerHeight * 0.65;
 
-    this.checkDistance = this.checkDistance.bind(this);
+    // Método de bind para referenciar o this do callback da função ao objeto da classe
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
   }
 
-  // Pega a distância de cada item em relação ao topo do site
+  // Pega a distância de cada target(section) e retorna através do método map um objeto
+  // com o elemento do target e sua distância fixa em relação ao topo
   getDistance() {
     this.distance = [...this.sections].map((section) => {
       const offset = section.offsetTop;
