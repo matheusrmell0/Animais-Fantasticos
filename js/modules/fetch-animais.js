@@ -47,7 +47,7 @@ export default function fetchAnimals(target, url) {
   return createAnimals();
 }
 
-// FETCH ANIMALS API Opcao2
+// // FETCH ANIMALS API Opcao2
 // export default function initFetchAnimais() {
 //   function listAnimals(animalAttributes){
 //     const div = document.createElement("div");
@@ -90,13 +90,16 @@ export default function fetchAnimals(target, url) {
 //       }
 //     });
 //   }
+ 
+//   const observerTarget = document.querySelector(".numeros");
+//   const observer = new MutationObserver(handleMutation);
+//   observer.observe(observerTarget, { attributes: true });
+
 //   function handleMutation(mutation) {
+    
 //     if (mutation[0].target.classList.contains("anime")) {
 //       observer.disconnect();
 //       fetchAnimals("./animaisapi.json", ".numero-animal h3");
 //     }
 //   }
-//   const observerTarget = document.querySelector(".numeros");
-//   const observer = new MutationObserver(handleMutation);
-//   observer.observe(observerTarget, { attributes: true });
 // }
