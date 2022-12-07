@@ -1,21 +1,6 @@
 // FETCH ANIMALS API
 import AnimeNumbers from "./helper/anime-numbers.js";
 
-export default function fetchAnimals(target, url) {
-  // Cria a div contendo informações com o total de animais
-  function createAnimal(animal) {
-    const div = document.createElement("div");
-    div.classList.add("numero-animal");
-    div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`;
-    return div;
-  }
-
-  // Preenche cada animal no DOM
-  function fillAnimals(animal) {
-    const divAnimal = createAnimal(animal);
-    document.querySelector(target).appendChild(divAnimal);
-  }
-
   // Anima os números de cada animal
   function animeNumbers() {
     const animarNumeros = new AnimeNumbers(
@@ -26,23 +11,28 @@ export default function fetchAnimals(target, url) {
     animarNumeros.init();
   }
 
-  // Puxa os aniamis através de um arquivo JSON
-  // E cria cada animal na função createAnimal
-  async function createAnimals() {
+export default function initFetchAnimais() {
+  async function fetchAnimals(url) {
     try {
-      // Fetch e aguarda a resposta e transforma a resposta em JSON
-      const animaisResponse = await fetch(url);
-      const animaisJSON = await animaisResponse.json();
-      console.log(animaisJSON)
-
-      // Após a transformação de JSON, ativa as funções de preencher e animar os números
-      animaisJSON.forEach((animal) => fillAnimals(animal));
-      animeNumbers();
+      const animaisJSON = await (await fetch(url)).json();
+      const numerosGrid = document.querySelector(".numeros-grid");
+      animaisJSON.forEach((animal) => {
+        const divAnimal = createAnimal(animal);
+        numerosGrid.appendChild(divAnimal);
+      });
+      animeNumbers()
     } catch (erro) {
       console.log(Error(erro));
     }
   }
-  return createAnimals();
+
+  function createAnimal(animal) {
+    const div = document.createElement("div");
+    div.classList.add("numero-animal");
+    div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`;
+    return div;
+  }
+  fetchAnimals("./animaisapi.json");
 }
 
 // FETCH ANIMALS API Opcao2
