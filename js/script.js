@@ -4,7 +4,7 @@ import TabNav from './modules/tab-nav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import ScrollAnime from './modules/scroll-anime.js';
-import initDropDownMenu from './modules/dropdown-menu.js';
+import DropDownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animais.js';
 import fetchBitcoins from './modules/fetch-bitcoins.js';
@@ -28,7 +28,9 @@ tooltip.init()
 const scrollAnime = new ScrollAnime('[data-anime="scroll"]', 'anime')
 scrollAnime.init()
 
-initDropDownMenu();
+const dropDownMenu = new DropDownMenu("[data-dropdown]", "ativo");
+dropDownMenu.init()
+
 initMenuMobile();
 initOpenOng();
 fetchBitcoins('https://blockchain.info/ticker','.btc-preco');
