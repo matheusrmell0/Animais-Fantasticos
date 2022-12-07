@@ -36,4 +36,4 @@ menuMobile.init()
 
 initOpenOng();
 fetchBitcoins('https://blockchain.info/ticker','.btc-preco');
-fetchAnimals('.numeros-grid');
+fetchAnimals('.numeros-grid', '../../animaisapi.json');

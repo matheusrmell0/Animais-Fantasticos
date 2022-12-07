@@ -2,7 +2,6 @@
 import AnimeNumbers from "./helper/anime-numbers.js";
 
 export default function fetchAnimals(target, url) {
-  if(url === undefined) url = '../../animaisapi.json'
   // Cria a div contendo informações com o total de animais
   function createAnimal(animal) {
     const div = document.createElement("div");
@@ -32,7 +31,8 @@ export default function fetchAnimals(target, url) {
   async function createAnimals() {
     try {
       // Fetch e aguarda a resposta e transforma a resposta em JSON
-      const animaisJSON = await (await fetch(url)).json();
+      const animaisResponse = await fetch(url);
+      const animaisJSON = await animaisResponse.json();
       console.log(animaisJSON)
 
       // Após a transformação de JSON, ativa as funções de preencher e animar os números
