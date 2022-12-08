@@ -8,7 +8,7 @@ import DropDownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animais.js';
 import fetchBitcoins from './modules/fetch-bitcoins.js';
-import initOpenOng from './modules/open-store.js';
+import openOng from './modules/open-store.js';
 
 const scrollSuave = new SmoothScroll('[data-menu="smooth"] a[href^="#"]', { behavior: "smooth", block: "start", })
 scrollSuave.init()
@@ -34,6 +34,6 @@ dropDownMenu.init()
 const menuMobile = new MenuMobile("[data-menu='button']", '[data-menu="list"]', "ativo");
 menuMobile.init()
 
-initOpenOng();
+openOng('[data-semana]', 'open');
 fetchBitcoins('https://blockchain.info/ticker','.btc-preco');
-fetchAnimals('.numeros-grid', '../json/animaisapi.json');
+fetchAnimals('.numeros-grid');
