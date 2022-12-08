@@ -2,7 +2,7 @@
 import AnimeNumbers from "./helper/anime-numbers.js";
 
 export default function fetchAnimals(target, url) {
-if(url === undefined) url =  '../json/animaisapi.json'
+if(url === undefined) url =  './animaisapi.json'
 
   // Cria a div contendo informações com o total de animais
   function createAnimal(animal) {
