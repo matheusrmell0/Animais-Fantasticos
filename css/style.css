@@ -16,6 +16,7 @@
 @import "./faq.css";
 @import "./contato.css";
 @import "./numeros.css";
+@import "./slide.css";
 
 /* Responsivo */
 @import "./global/responsivo.css";

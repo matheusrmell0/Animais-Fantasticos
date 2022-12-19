@@ -9,6 +9,7 @@ import MenuMobile from './modules/menu-mobile.js';
 import fetchAnimals from './modules/fetch-animais.js';
 import fetchBitcoins from './modules/fetch-bitcoins.js';
 import openOng from './modules/open-store.js';
+import SlideNav from "./modules/slide.js";
 
 const scrollSuave = new SmoothScroll('[data-menu="smooth"] a[href^="#"]', { behavior: "smooth", block: "start", })
 scrollSuave.init()
@@ -37,3 +38,7 @@ menuMobile.init()
 openOng('[data-semana]', 'open');
 fetchBitcoins('https://blockchain.info/ticker','.btc-preco');
 fetchAnimals('.numeros-grid');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init()
+slide.addControl('.custom-controls')
