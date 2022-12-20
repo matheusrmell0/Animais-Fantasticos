@@ -15,7 +15,8 @@ export default class MenuMobile {
   }
 
   // Adiciona a classe definida para ativação do menu via CSS
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.class);
     this.menuButton.classList.add(this.class);
     outsideClick(this.menuList, this.eventos, () => {
